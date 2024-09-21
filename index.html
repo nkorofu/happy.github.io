@@ -11,16 +11,16 @@
     />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link rel="stylesheet" href="style/style.css" />
-   </head>
+  </head>
 
   <body>
-    <audio id="birthdaySong" loop>
-      <source src="Waterfall (Jon Schmidt Original).mp3" type="audio/mpeg">
+    <audio
+      autoplay="true"
+      loop
+    >
+      <source src="https://example.com/path/to/your/song.mp3" type="audio/mpeg">
       あなたのブラウザは audio タグに対応していません。
     </audio>
-
-    <button id="playButton">音楽を再生</button>
-    
     <div class="container">
       <div class="one">
         <h1 class="one">
@@ -137,17 +137,9 @@
         <p class="last-smile">:)</p>
       </div>
     </div>
-  </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script type="application/javascript" src="script/main.js"></script>
-    <script>
-      document.getElementById("playButton").onclick = function() {
-        var audio = document.getElementById("birthdaySong");
-        audio.play().catch(function(error) {
-          console.error("再生エラー:", error);
-        });
-      };
-    </script>
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script type="application/javascript" src="script/main.js"></script>
 </html>
+
