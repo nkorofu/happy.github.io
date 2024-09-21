@@ -23,6 +23,10 @@ body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
 }
+.container {
+    visibility: visible; /* 確実に表示されるように */
+}
+
 
 .container {
   height: 100vh;
