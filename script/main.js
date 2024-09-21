@@ -1,4 +1,9 @@
 // Animation Timeline
+document.getElementById('play-button').addEventListener('click', function() {
+  const audio = document.getElementById('background-music');
+  audio.play();
+});
+
 const animationTimeline = () => {
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
