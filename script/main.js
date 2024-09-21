@@ -4,6 +4,7 @@ document.getElementById('play-button').addEventListener('click', function() {
   audio.play();
 });
 
+// アニメーションのタイムライン
 const animationTimeline = () => {
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -64,9 +65,10 @@ const animationTimeline = () => {
       .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
       .to(".last-smile", 0.5, { rotation: 90 }, "+=1");
 
+    // 音楽オブジェクトを取得
     const birthdayMusic = document.getElementById("birthdayMusic");
 
-    // Click event for the message
+    // メッセージがクリックされたときのイベントリスナーを追加
     const clickMessage = document.getElementById("click-message");
     clickMessage.addEventListener("click", () => {
         birthdayMusic.volume = 1.0; // 音量を最大に
@@ -76,7 +78,7 @@ const animationTimeline = () => {
     });
 };
 
-// Fetch data from JSON file
+// JSONファイルからデータを取得
 const fetchData = () => {
     fetch("customize.json")
         .then(response => response.json())
@@ -93,7 +95,7 @@ const fetchData = () => {
         });
 };
 
-// Run fetch and animation in sequence
+// フェッチとアニメーションを順番に実行
 const resolveFetch = () => {
     return new Promise((resolve) => {
         fetchData();
