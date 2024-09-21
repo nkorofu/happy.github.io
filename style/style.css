@@ -1,3 +1,20 @@
+#play-button {
+    position: relative;
+    z-index: 10; /* 他の要素の上に表示 */
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-button:hover {
+    background-color: #2980b9; /* ホバー時の色 */
+}
+
 html {
   box-sizing: border-box;
 }
