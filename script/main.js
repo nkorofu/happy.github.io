@@ -60,14 +60,14 @@ const animationTimeline = () => {
       .to(".last-smile", 0.5, { rotation: 90 }, "+=1");
 
     const birthdayMusic = document.getElementById("birthdayMusic");
-    birthdayMusic.volume = 1.0; // 音量を最大に設定
-    birthdayMusic.play();
 
-    const replyBtn = document.getElementById("replay");
-    replyBtn.addEventListener("click", () => {
-        tl.restart();
-        birthdayMusic.currentTime = 0;
+    // Click event for the message
+    const clickMessage = document.getElementById("click-message");
+    clickMessage.addEventListener("click", () => {
+        birthdayMusic.volume = 1.0; // 音量を最大に
         birthdayMusic.play();
+        tl.restart();
+        birthdayMusic.currentTime = 0; // 音楽を最初に戻す
     });
 };
 
