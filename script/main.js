@@ -1,10 +1,4 @@
 // Animation Timeline
-document.getElementById('play-button').addEventListener('click', function() {
-  const audio = document.getElementById('background-music');
-  audio.play();
-});
-
-// アニメーションのタイムライン
 const animationTimeline = () => {
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -27,7 +21,6 @@ const animationTimeline = () => {
     };
 
     const tl = new TimelineMax();
-
     tl.to(".container", 0.1, { visibility: "visible" })
       .from(".one", 0.7, { opacity: 0, y: 10 })
       .from(".two", 0.4, { opacity: 0, y: 10 })
