@@ -13,13 +13,6 @@ const animationTimeline = () => {
         skewX: "15deg",
     };
 
-    const ideaTextTransLeave = {
-        opacity: 0,
-        y: 20,
-        rotationY: 5,
-        skewX: "-15deg",
-    };
-
     const tl = new TimelineMax();
     tl.to(".container", 0.1, { visibility: "visible" })
       .from(".one", 0.7, { opacity: 0, y: 10 })
